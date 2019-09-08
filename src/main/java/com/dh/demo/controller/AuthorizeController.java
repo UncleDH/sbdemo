@@ -40,7 +40,7 @@ public class AuthorizeController {
         System.out.println("token: " + accessToken);
         GithubUser user = githubProvider.getUser(accessToken);
         System.out.println("name: " + user.getName());
-        if(user != null) {
+        if(user.getName() != null) {
             //登录成功 写cookie和session
             request.getSession().setAttribute("user", user);//默认配置cookie
             return "redirect:/";
