@@ -17,5 +17,11 @@ ctrl+n 搜索class等文件
 
 ctrl+shift+n 搜索file等文件
 
+ctrl+alt+v 自动获取变量（把一条分成两条 先定义在使用）
+
+shift+f6 更改变量名（code 只修改代码 all 所有同名的字符串都会更改 一般用code模式）
+
+shift+回车 直接到下一行
+
 ####小操作
 - 代码右键 git show history 双击记录可以看到记录

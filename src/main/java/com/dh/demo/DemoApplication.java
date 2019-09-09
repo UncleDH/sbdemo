@@ -1,5 +1,8 @@
 package com.dh.demo;
 
+import com.dh.demo.model.User;
+import org.apache.ibatis.type.MappedTypes;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
