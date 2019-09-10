@@ -23,5 +23,12 @@ shift+f6 更改变量名（code 只修改代码 all 所有同名的字符串都�
 
 shift+回车 直接到下一行
 
+ctrl+p 查看方法所需的参数
+
+ctrl+w 选中上一层 在html文件中很好用可以选中标签内全部内容
+
 ####小操作
 - 代码右键 git show history 双击记录可以看到记录
+- 误判出错时 alt+enter 选择inspection 可以忽略这个出错标记
+（比如由于Mybatis的启动器并不是Spring官方出的，所以Spring会认为UserMapper对象没有被注入容器，从而报错）
+- 改错代码时可以使用 右键-git-revert 还原代码
