@@ -42,25 +42,28 @@ public class PublishController {
                 if("token".equals(cookie.getName())) {
                     String token = cookie.getValue();
                     user = userMapper.findByToken(token);
+                    System.out.println("user" + user);
                     if(user == null) {
                         model.addAttribute("error", "用户未登录");
                         return "publish";
+                    } else {
+                        Question question = new Question();
+                        question.setCreator(user.getAccountId());
+                        question.setTitle(title);
+                        question.setDescription(description);
+                        question.setTag(tag);
+                        question.setGmtCreate(System.currentTimeMillis());
+                        question.setGmtModified(question.getGmtCreate());
+                        questionMapper.create(question);
+                        return "redirect:/";
                     }
-                    break;
                 }
             }
-        } else {
-            model.addAttribute("error", "用户未登录");
-            return "publish";
         }
-        Question question = new Question();
-        question.setTitle(title);
-        question.setDescription(description);
-        question.setTag(tag);
-        question.setCreator(user.getAccountId());
-        question.setGmtCreate(System.currentTimeMillis());
-        question.setGmtModified(question.getGmtCreate());
-        questionMapper.create(question);
-        return "redirect:/";
+        model.addAttribute("error", "用户未登录");
+        return "publish";
+
+
+
     }
 }
