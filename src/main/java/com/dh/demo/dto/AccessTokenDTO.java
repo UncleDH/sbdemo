@@ -1,5 +1,8 @@
 package com.dh.demo.dto;
 
+import lombok.Data;
+
+@Data
 public class AccessTokenDTO {
     private String client_id;
     private String Client_secret;
@@ -8,7 +11,7 @@ public class AccessTokenDTO {
     private String state;
 
     //自动创建get/set alt+insert 选择get and set
-    public String getClient_id() {
+   /* public String getClient_id() {
         return client_id;
     }
 
@@ -46,5 +49,5 @@ public class AccessTokenDTO {
 
     public void setState(String state) {
         this.state = state;
-    }
+    }*/
 }

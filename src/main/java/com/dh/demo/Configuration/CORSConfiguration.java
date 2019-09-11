@@ -1,3 +1,4 @@
+/*
 package com.dh.demo.Configuration;
 
 import org.springframework.context.annotation.Configuration;
@@ -16,3 +17,4 @@ public class CORSConfiguration extends WebMvcConfigurationSupport {
                 .allowCredentials(true);
     }
 }
+*/
