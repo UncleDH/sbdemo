@@ -15,4 +15,7 @@ public interface QuestionMapper {
 
     @Select("select * from question")
     List<Question> list();
+
+    @Select("select * from question where creator = #{userId}" )
+    List<Question> listByUserId(Integer userId);
 }

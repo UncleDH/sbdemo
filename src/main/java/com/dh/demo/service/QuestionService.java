@@ -33,4 +33,17 @@ public class QuestionService {
         }
         return questionDTOList;
     }
+
+    public List<QuestionDTO> list(Integer userId) {
+        List<Question> questions = questionMapper.listByUserId(userId);
+        List<QuestionDTO> questionDTOList = new ArrayList<>();
+        for (Question question : questions) {
+            User user = userMapper.findById(question.getCreator());
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(question, questionDTO);//快速把前一个类的属性拷贝到后一个类的对应属性
+            questionDTO.setUser(user);
+            questionDTOList.add(questionDTO);
+        }
+        return questionDTOList;
+    }
 }
