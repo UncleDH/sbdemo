@@ -26,7 +26,7 @@ public class ProfileController {
     @GetMapping("/profile/{action}")
     public String profile(@PathVariable(name = "action") String action,
                           HttpServletRequest request, Model model) {
-        User user = null;
+        /*User user = null;
         Cookie[] cookies = request.getCookies();
         if(cookies != null) {//防止cookie为空
             for(Cookie cookie : cookies) {
@@ -39,7 +39,8 @@ public class ProfileController {
                     break;
                 }
             }
-        }
+        }*/
+        User user = (User) request.getSession().getAttribute("user");
         if(user == null) {
             return "redirect:/";
         }

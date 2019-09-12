@@ -13,7 +13,7 @@ alt+n import一些类或者添加catch等系统自动生成的东西
 
 alt+insert 自动创建get/set 选择get and set
 
-ctrl+n 搜索class等文件
+ctrl+n 搜索class等文件(报错的文件加行数也可以直接搜索定位)
 
 ctrl+shift+n 搜索file等文件
 
@@ -27,8 +27,14 @@ ctrl+p 查看方法所需的参数
 
 ctrl+w 选中上一层 在html文件中很好用可以选中标签内全部内容
 
+shift+f6 重命名
+
+ctrl+f12 展示该文件下所有方法列表 可以粘贴方法名字定位方法
+
+html标签名+tab 快速生成html标签
+
 ####小操作
 - 代码右键 git show history 双击记录可以看到记录
-- 误判出错时 alt+enter 选择inspection 可以忽略这个出错标记
+- 误判出错时 alt+enter 选择inspection disable 可以忽略这个出错标记
 （比如由于Mybatis的启动器并不是Spring官方出的，所以Spring会认为UserMapper对象没有被注入容器，从而报错）
 - 改错代码时可以使用 右键-git-revert 还原代码

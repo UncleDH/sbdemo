@@ -23,9 +23,11 @@ public class IndexController {
     @Autowired
     private QuestionService questionService;
 
+
+
     @GetMapping("/")
     public String index(HttpServletRequest request, Model model) {
-        Cookie[] cookies = request.getCookies();
+        /*Cookie[] cookies = request.getCookies();
         if(cookies != null) {//防止cookie为空
             for(Cookie cookie : cookies) {
                 if("token".equals(cookie.getName())) {
@@ -37,7 +39,7 @@ public class IndexController {
                     break;
                 }
             }
-        }
+        }*/
 
         List<QuestionDTO> questionList = questionService.list();
         model.addAttribute("questions", questionList);
