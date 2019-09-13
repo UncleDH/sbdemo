@@ -41,11 +41,11 @@ public class AuthorizeController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/sql")
+/*    @GetMapping("/sql")
     @ResponseBody//返回字符串 而不是去resources/templates中找页面 与RestController一个效果
     public List<User> getAll(){
         return userMapper.findAll();
-    }
+    }*/
 
     @GetMapping("/callback")
     public String callback(@RequestParam(name="code") String code,

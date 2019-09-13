@@ -4,14 +4,12 @@ import com.dh.demo.dto.QuestionDTO;
 import com.dh.demo.mapper.UserMapper;
 import com.dh.demo.model.User;
 import com.dh.demo.service.QuestionService;
-import javafx.scene.control.Pagination;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 

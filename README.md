@@ -38,3 +38,16 @@ html标签名+tab 快速生成html标签
 - 误判出错时 alt+enter 选择inspection disable 可以忽略这个出错标记
 （比如由于Mybatis的启动器并不是Spring官方出的，所以Spring会认为UserMapper对象没有被注入容器，从而报错）
 - 改错代码时可以使用 右键-git-revert 还原代码
+
+####mybatis generator 操作SQL使用说明
+class指User Question等类的实例 example值要作用的数据库的位置
+example.createCriteria().and列名EqualTo(question.get列名());把某列的值定义为具体值 方便后续查找
+- 新增
+  + insert(class)
+- 修改
+  + updateByExampleSelective(class, example)
+- 删除
+  + 
+- 查找
+  + selectByPrimaryKey(class.id) 根据主键的值查找
+  + selectByExample(example) 根据example内容查找
