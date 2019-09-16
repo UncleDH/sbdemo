@@ -1,6 +1,7 @@
 package com.dh.demo.dto;
 
 import com.dh.demo.exception.CustomizeErrorCode;
+import com.dh.demo.exception.CustomizeException;
 import lombok.Data;
 
 @Data
@@ -15,11 +16,17 @@ public class ResultDTO {
         return resultDTO;
     }
 
-    public static Object errorOf(CustomizeErrorCode errorCode) {
+    public static ResultDTO errorOf(CustomizeException e) {
+        return errorOf(e.getCode(), e.getMessage());
+    }
+
+    public static ResultDTO errorOf(CustomizeErrorCode errorCode) {
         return errorOf(errorCode.getCode(), errorCode.getMessage());
     }
 
     public static ResultDTO okOf() {
         return errorOf(200, "请求成功");
     }
+
+
 }
